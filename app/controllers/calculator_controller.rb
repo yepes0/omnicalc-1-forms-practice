@@ -1,17 +1,14 @@
 class CalculatorController < ApplicationController
-  def render_homepage
-    render({ :template => "calc_templates/homepage" })
+  def square
+    render({ :template => "calc_templates/square" })
   end
 
-  def calc_square
-    @number_of_dice = params.fetch("dice").to_i
+  def square_results
+    @number = params.fetch("num").to_i
 
-    @number_of_dice.times do
-      dice = rand(1..@how_many_sides)
-      @rolls.push(dice)
-    end
+    @square_result = @number * @number
 
-    render({ :template => "dice_templates/process_roll" })
+    render({ :template => "dice_templates/square_results" })
   end
 
 end
