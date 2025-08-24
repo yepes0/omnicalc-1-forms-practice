@@ -1,6 +1,6 @@
-class DiceController < ApplicationController
+class CalculatorController < ApplicationController
   def render_homepage
-    render({ :template => "calculator_templates/homepage" })
+    render({ :template => "calc_templates/homepage" })
   end
 
   def calc_square
