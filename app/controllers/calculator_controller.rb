@@ -26,7 +26,7 @@ class CalculatorController < ApplicationController
   def payment_results
     @apr = params.fetch("user_apr").to_f
     @years = params.fetch("user_years").to_i
-    @principal = params.fetch("user_pv").to_f
+    @principal = params.fetch("user_principal").to_f
 
     rate = @apr / 100 / 12
     nper = @years * 12
