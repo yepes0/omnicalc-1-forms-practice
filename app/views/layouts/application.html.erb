@@ -1,49 +1,31 @@
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="/icon.png">
+<!doctype html>
+<html lang="en" class="pico"> <!-- put the pico class here (or on <body> if you prefer) -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-  </head>
+  <link rel="icon" href="/icon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <title>Calculators</title>
+</head>
 
-  <body>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div><%= link_to "Calculators", "/" %></div>
+        <div><%= link_to "Square Calculator", "/square/new" %></div>
+        <div><%= link_to "Square Root Calculator", "/square_root/new" %></div>
+        <div><%= link_to "Payment Calculator", "/payment/new" %></div>
+        <div><%= link_to "Random Number Generator", "/random/new" %></div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
     <%= yield %>
-  <body class="pico">
-    <header>
-      <div class="container">
-        <nav>
-          <div>
-            <a href="/">
-              <strong>Calculators</strong>
-            </a>
-          </div>
-          <div>
-            <a href="/square/new">
-              Square Calculator
-            </a>
-          </div>
-          <div>
-            <a href="/square_root/new">
-              Square Root Calculator
-            </a>
-          </div>
-          <div>
-            <a href="/payment/new">
-              Payment Calculator
-            </a>
-          </div>
-          <div>
-            <a href="/random/new">
-              Random Number Generator
-            </a>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <div class="container">
-        <%= yield %>
-      </div>
-    </main>
-  </body>
+  </main>
+</body>
 </html>
