@@ -1,15 +1,23 @@
-<form action="/square/results">
+<form action="/random/results">
 
   <div>
     <label for="min_number"> Minimum </label>
   </div>
 
   <div>
-    <input type="text" name="number" id="user_number" placeholder="What number do you want to take the square of?"> 
+    <input type="text" name="min_number" id="min_number" placeholder="E.g. 1.5"> 
+  </div>
+
+  <div>
+    <label for="max_number"> Maximum </label>
+  </div>
+
+  <div>
+    <input type="text" name="max_number" id="max_number" placeholder="E.g. 5.5"> 
   </div>
 
   <button type="submit">
-    Calculate square
+    Pick random number
   </button>
 
 </form>

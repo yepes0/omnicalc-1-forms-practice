@@ -44,8 +44,10 @@ class CalculatorController < ApplicationController
   end
 
   def random_results
-    @min = params.fetch("user_min").to_f
-    @max = params.fetch("user_max").to_f
+    @min = params.fetch("min_number").to_f
+    @max = params.fetch("max_number").to_f
+
+    @random = rand(@min..@max)
 
     render({ :template => "calculator_templates/random_results" })
   end
